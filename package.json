@@ -1,0 +1,45 @@
+{
+  "name": "php-qs",
+  "version": "0.5.3",
+  "description": "PHP Query String Parser and Builder",
+  "keywords": [
+    "php",
+    "query",
+    "params",
+    "qs",
+    "parse_str",
+    "http_build_query"
+  ],
+  "bugs": {
+    "url": "https://github.com/brc-dd/php-qs",
+    "email": "brc-dd@hotmail.com"
+  },
+  "repository": "github:brc-dd/php-qs",
+  "funding": "https://github.com/sponsors/brc-dd",
+  "license": "MIT",
+  "author": "Divyansh Singh <brc-dd@hotmail.com> (https://github.com/brc-dd)",
+  "sideEffects": false,
+  "type": "module",
+  "exports": {
+    "import": "./dist/index.js",
+    "require": "./dist/index.cjs"
+  },
+  "main": "dist/index.cjs",
+  "files": [
+    "dist/*"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest run",
+    "release": "pnpm build && pnpm test && release-it"
+  },
+  "devDependencies": {
+    "@types/node": "^20.8.5",
+    "locutus": "^2.0.16",
+    "release-it": "^16.2.1",
+    "tsup": "^7.2.0",
+    "typescript": "^5.2.2",
+    "vitest": "^0.34.6"
+  },
+  "packageManager": "pnpm@8.9.0"
+}
