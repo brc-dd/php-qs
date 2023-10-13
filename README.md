@@ -1,6 +1,6 @@
 # php-qs
 
-A JS library for encoding and decoding query strings similar to PHP's `http_build_query` and `parse_str` functions.
+A JS library for building and parsing query strings similar to PHP's `http_build_query` and `parse_str` functions.
 
 ## Installation
 
@@ -23,10 +23,11 @@ console.log(parse('foo=bar&baz%5B0%5D=qux&baz%5B1%5D=quux&corge='))
 ## Notes
 
 - Not battle-tested. Use at your own risk.
+  - Although, the tests are taken from PHP's source code and are passing.
 - Not 100% compatible with PHP functions. For example,
-  - `parse` might throw errors if the input is not a valid query string
-  - `stringify` uses RFC 3986, while PHP uses RFC 1738 by default
-  - some differences are there because of what Array means in JS vs PHP
+  - `parse` might throw errors if the input is not a valid query string.
+  - `stringify` uses RFC 3986, while PHP uses RFC 1738 by default.
+  - some differences are there because of what Array means in JS vs PHP.
 
 ## Credits
 
