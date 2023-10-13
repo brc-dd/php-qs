@@ -161,6 +161,20 @@ describe('parse', () => {
       }
     })
   })
+
+  test('string with null value', () => {
+    expect(parse('a=')).toStrictEqual({
+      a: null
+    })
+    expect(parse('a[b]=&a[c][e]=')).toStrictEqual({
+      a: {
+        b: null,
+        c: {
+          e: null
+        }
+      }
+    })
+  })
 })
 
 describe('stringify', () => {
@@ -234,5 +248,20 @@ describe('stringify', () => {
         .split('&')
         .sort()
     )
+  })
+
+  test('null behaves same as empty string', () => {
+    expect(stringify(null)).toBe('')
+    expect(
+      stringify({
+        a: {
+          b: null,
+          c: {
+            d: undefined,
+            e: ''
+          }
+        }
+      })
+    ).toBe('a%5Bb%5D=&a%5Bc%5D%5Be%5D=')
   })
 })
