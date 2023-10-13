@@ -1,6 +1,6 @@
 {
   "name": "php-qs",
-  "version": "0.5.3",
+  "version": "0.1.0",
   "description": "PHP Query String Parser and Builder",
   "keywords": [
     "php",
