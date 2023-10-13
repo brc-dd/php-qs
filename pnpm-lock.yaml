@@ -4,13 +4,18 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+patchedDependencies:
+  locutus@2.0.16:
+    hash: gcj4swafdmmgc4rv5mg2i7x75m
+    path: patches/locutus@2.0.16.patch
+
 devDependencies:
   '@types/node':
     specifier: ^20.8.5
     version: 20.8.5
   locutus:
     specifier: ^2.0.16
-    version: 2.0.16
+    version: 2.0.16(patch_hash=gcj4swafdmmgc4rv5mg2i7x75m)
   release-it:
     specifier: ^16.2.1
     version: 16.2.1(typescript@5.2.2)
@@ -2140,10 +2145,11 @@ packages:
     engines: {node: '>=14'}
     dev: true
 
-  /locutus@2.0.16:
+  /locutus@2.0.16(patch_hash=gcj4swafdmmgc4rv5mg2i7x75m):
     resolution: {integrity: sha512-pGfl6Hb/1mXLzrX5kl5lH7gz25ey0vwQssZp8Qo2CEF59di6KrAgdFm+0pW8ghLnvNzzJGj5tlWhhv2QbK3jeQ==}
     engines: {node: '>= 10'}
     dev: true
+    patched: true
 
   /lodash.capitalize@4.2.1:
     resolution: {integrity: sha512-kZzYOKspf8XVX5AvmQF94gQW0lejFVgb80G85bU4ZWzoJ6C03PQg3coYAUpSTpQWelrZELd3XWgHzw4Ck5kaIw==}

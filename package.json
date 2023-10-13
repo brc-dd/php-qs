@@ -41,5 +41,10 @@
     "typescript": "^5.2.2",
     "vitest": "^0.34.6"
   },
-  "packageManager": "pnpm@8.9.0"
+  "packageManager": "pnpm@8.9.0",
+  "pnpm": {
+    "patchedDependencies": {
+      "locutus@2.0.16": "patches/locutus@2.0.16.patch"
+    }
+  }
 }

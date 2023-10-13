@@ -1,0 +1,20 @@
+diff --git a/php/strings/parse_str.js b/php/strings/parse_str.js
+index 5e08ea47e7da64b4bf8c9dd10d486cad56f08cfa..38b862d69d87740b353736953507857676b77747 100644
+--- a/php/strings/parse_str.js
++++ b/php/strings/parse_str.js
+@@ -63,15 +63,6 @@ module.exports = function parse_str(str, array) {
+     return decodeURIComponent(str.replace(/\+/g, '%20'));
+   };
+ 
+-  var $global = typeof window !== 'undefined' ? window : global;
+-  $global.$locutus = $global.$locutus || {};
+-  var $locutus = $global.$locutus;
+-  $locutus.php = $locutus.php || {};
+-
+-  if (!array) {
+-    array = $global;
+-  }
+-
+   for (i = 0; i < sal; i++) {
+     tmp = strArr[i].split('=');
+     key = _fixStr(tmp[0]);
